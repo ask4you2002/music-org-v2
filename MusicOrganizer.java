@@ -135,15 +135,14 @@ public class MusicOrganizer
         int coleccion = files.size();
         while ((index < coleccion)) {
             String filename = files.get(index);
+            
             if (filename.contains(searchString)) {
                 numero = index;
-                index = 0;
+                index = coleccion + 1;
             } else {
                 index ++;
             }
-            if (index == 0) {
-                return numero;
-            }
+            
         }
         
         return numero;
