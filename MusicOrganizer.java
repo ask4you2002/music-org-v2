@@ -133,11 +133,11 @@ public class MusicOrganizer
         int index = 0;
         int numero = -1;
         int coleccion = files.size();
-        while ((index < coleccion)) {
+
+        while ((index < coleccion) && (numero != index)) {
             String filename = files.get(index);
             if (filename.contains(searchString)) {
                 numero = index;
-                coleccion = -1;
             } else {
                 index ++;
             }
